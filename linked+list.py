@@ -11,11 +11,24 @@ class LinkedList:
     def __init__(self, head= None):
         self.head = head
 
+    #Linked list transversal
     def print_list(self):
         current = self.head
         while(current):
             print(current.data)
             current = current.next
+
+
+    # Function to insert a new node at the beginning
+    def push(self, new_node):
+        if self.head:
+            
+            new_node.next = self.head
+            self.head = new_node
+
+    # Function to insert a new node at the end
+    def append(self, new_node):
+        pass 
 
 #just initaiting a singly linked list    
 if __name__=="__main__":
